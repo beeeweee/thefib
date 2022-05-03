@@ -14,12 +14,16 @@ let tempSum = 0;
     let count = 2;
 //while loop - while the count starting at 2 is less than the input of fib, keep running
         while( count <= n ){
+            //handling the equation for this count
             currentSum = prevSum+tempSum;
+            //storing the prevSUm for the next iterationo
             tempSum = prevSum;
+            //storing this current iterations sum for the next iteration so you can calculate that currentSum
             prevSum = currentSum;
+            //increase count for next Fib number
             count++
             }
-
+//out of the loop, return the requested Fib
     return currentSum;
 }  
 console.log("Two Pointer Approach",fibTwoPointer(7))
